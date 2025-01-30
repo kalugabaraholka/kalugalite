@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калуга Барахолка</title>
+    <meta name="description" content="Добро пожаловать на официальный сайт Калуга Барахолка">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f0f0f0, #ffffff);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .main-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-image img {
+            max-width: 80%;
+            max-height: 60vh;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .main-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .file-links {
+            margin: 20px;
+        }
+        .file-links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .file-links a:hover {
+            background: #0056b3;
+        }
+        .return-link {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .return-link:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-image">
+        <a href="#files-section">
+            <img src="image.webp" alt="Image" id="main-image">
+        </a>
+    </div>
+    
+    <h1>Файлобарахолка</h1>
+    <div id="files-section" class="file-links">
+        <a href="https://www.waterfox.net/download/" target="_blank">Скачать Waterfox</a>
+        <a href="https://cloud.mail.ru/public/K5HX/iVtFuKKVb" target="_blank">Скачать Revert8Plus</a>
+        <a href="https://store.steampowered.com/about/" target="_blank">Скачать Steam</a>
+        <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Скачать NotePad++</a>
+        <a href="https://supermium.com/" target="_blank">Скачать Supermium</a>
+        <a href="https://www.fosshub.com/qBittorrent.html" target="_blank">Скачать QBitTorrent</a>
+        <a href="https://drive.google.com/drive/folders/1M_OVQJZ8FYc4FQv0kozGxdqb9_aDPvPc?usp=sharing" target="_blank">Скачать эмулятор Switch + keys&firmware</a>
+        <a href="https://archive.org/download/windows-7-wallpaper-pack/Windows%207%20Wallpaper%20Pack.rar" target="_blank">Скачать обои из Windows 7</a>
+        <a href="#" class="return-link">Вернуться наверх</a>
+    </div>
+
+    <script>
+        const imageElement = document.getElementById('main-image');
+        if (!imageElement) {
+            console.error("пашёл в писду");
+        }
+        imageElement.addEventListener('mouseenter', () => {
+            imageElement.src = 'image2.png';
+        });
+        imageElement.addEventListener('mouseleave', () => {
+            imageElement.src = 'image.webp';
+        });
+    </script>
+</body>
+</html>
